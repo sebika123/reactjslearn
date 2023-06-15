@@ -22,15 +22,44 @@
 // export default App;
 
 
-import React,{useState} from "react";
-import './style.css'; 
-const App=()=>{
-    const [number,setNumber]=useState(0)
-    return <div>
-        <h1>{number}</h1>
-        <button  onClick={()=>setNumber(number+1)}  className="button">Add</button>
-        <button onClick={()=>setNumber(number-1)} className="button">Less</button>
-        <button  onClick={()=>setNumber(0)} className="button">Reset</button>
+//COUNTER APP
+
+// import React,{useState} from "react";
+// import './style.css'; 
+// const App=()=>{
+//     const [number,setNumber]=useState(0)
+//     return <div>
+//         <h1>{number}</h1>
+//         <button  onClick={()=>setNumber(number+1)}  className="button">Add</button>
+//         <button onClick={()=>setNumber(number-1)} className="button">Less</button>
+//         <button  onClick={()=>setNumber(0)} className="button">Reset</button>
+//     </div>
+// }
+//  export default App;
+
+
+
+//Dice roller
+
+import React,{useState} from 'react';
+import './style.css';
+const App=()=> {
+    const [diceNumber,setDiceNumber]=useState(4)
+
+    const refreshDice=()=>{
+      const ranno=Math.floor(Math.random()*6)+1;
+      setDiceNumber(ranno);
+
+    }
+  return (
+    <div>
+       <center> <img width={300} height={300} src={require(`./images/${diceNumber}.jpg`)} alt="dice"/><br></br>
+       <button  onClick ={()=> { refreshDice()
+       }}
+       className="button">Roll The dice</button>
+       </center>
     </div>
+  )
 }
- export default App;
+
+export default App;
