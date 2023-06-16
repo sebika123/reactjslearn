@@ -10,11 +10,21 @@
 // ReactDOM.render(<Button/>,document.getElementById('root'));
 
 //Counterapp
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import App from "./App";
+// import './style.css';
+
+// ReactDOM.render(<App/>,document.getElementById("root"));
+
+
+
+//simple interest calculator
+
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import './style.css';
-
+//import './style.css';
 ReactDOM.render(<App/>,document.getElementById("root"));
 
 

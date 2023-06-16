@@ -41,25 +41,84 @@
 
 //Dice roller
 
+// import React,{useState} from 'react';
+// import './style.css';
+// const App=()=> {
+//     const [diceNumber,setDiceNumber]=useState(4)
+
+//     const refreshDice=()=>{
+//       const ranno=Math.floor(Math.random()*6)+1;
+//       setDiceNumber(ranno);
+
+//     }
+//   return (
+//     <div>
+//        <center> <img width={300} height={300} src={require(`./images/${diceNumber}.jpg`)} alt="dice"/><br></br>
+//        <button  onClick ={()=> { refreshDice()
+//        }}
+//        className="button">Roll The dice</button>
+//        </center>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+
+
+//calculator for simpole interest
 import React,{useState} from 'react';
+//import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import './style.css';
-const App=()=> {
-    const [diceNumber,setDiceNumber]=useState(4)
 
-    const refreshDice=()=>{
-      const ranno=Math.floor(Math.random()*6)+1;
-      setDiceNumber(ranno);
 
-    }
-  return (
-    <div>
-       <center> <img width={300} height={300} src={require(`./images/${diceNumber}.jpg`)} alt="dice"/><br></br>
-       <button  onClick ={()=> { refreshDice()
-       }}
-       className="button">Roll The dice</button>
-       </center>
-    </div>
-  )
-}
 
+const App=()=>{
+  const[P,setP]=useState(0)
+  const[T,setT]=useState(0)
+  const[R,setR]=useState(0)
+  const[Si,setSi]=useState(0)
+
+  const Calculate=()=>{
+    
+   setSi((P*T*R)/100);
+
+  }
+
+return (
+<div className="div">
+<Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+         
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            SimpleInterest
+          </Typography>
+          
+        </Toolbar>
+      </AppBar>
+      <br></br>
+      <TextField onChange={(event)=>setP(event.target.value)} id="outlined-basic" label="Enter P" variant="outlined" />
+      <TextField onChange={(event)=>setT(event.target.value)} id="outlined-basic" label="Enter t" variant="outlined" />
+      <TextField onChange={(event)=>setR(event.target.value)} id="outlined-basic" label="Enter R" variant="outlined" />
+    
+    <br>
+    </br>
+    <Button onClick={()=>{
+      Calculate()
+    }} variant="contained">Calculate</Button>
+    <br>
+    </br>
+    <Typography variant="h6" gutterBottom>
+       SimpleInterest is {Si}
+      </Typography>
+    </Box>
+</div>
+)}
 export default App;
