@@ -67,58 +67,107 @@
 
 
 //calculator for simpole interest
-import React,{useState} from 'react';
-//import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import './style.css';
+// import React,{useState} from 'react';
+// //import * as React from 'react';
+// import AppBar from '@mui/material/AppBar';
+// import Box from '@mui/material/Box';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import Button from '@mui/material/Button';
+// import TextField from '@mui/material/TextField';
+// import './style.css';
 
+
+
+// const App=()=>{
+//   const[P,setP]=useState(0)
+//   const[T,setT]=useState(0)
+//   const[R,setR]=useState(0)
+//   const[Si,setSi]=useState(0)
+
+//   const Calculate=()=>{
+    
+//    setSi((P*T*R)/100);
+
+//   }
+
+// return (
+// <div className="div">
+// <Box sx={{ flexGrow: 1 }}>
+//       <AppBar position="static">
+//         <Toolbar>
+         
+//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//             SimpleInterest
+//           </Typography>
+          
+//         </Toolbar>
+//       </AppBar>
+//       <br></br>
+//       <TextField onChange={(event)=>setP(event.target.value)} id="outlined-basic" label="Enter P" variant="outlined" />
+//       <TextField onChange={(event)=>setT(event.target.value)} id="outlined-basic" label="Enter t" variant="outlined" />
+//       <TextField onChange={(event)=>setR(event.target.value)} id="outlined-basic" label="Enter R" variant="outlined" />
+    
+//     <br>
+//     </br>
+//     <Button onClick={()=>{
+//       Calculate()
+//     }} variant="contained">Calculate</Button>
+//     <br>
+//     </br>
+//     <Typography variant="h6" gutterBottom>
+//        SimpleInterest is {Si}
+//       </Typography>
+//     </Box>
+// </div>
+// )}
+// export default App;
+
+
+//for to do wishlist project
+//  import React,{useState} from "react";
+//  import"./style.css";
+
+
+// const App  =()=>  {
+//   const [userinput,setuserinput]=useState([""])
+//   const [todos,settodos]=useState([])
+
+//  const Add=()=>{
+//   settodos([...todos,userinput])
+// }
+  
+// return (
+//   <div>
+//    <h4>Todo list</h4>
+//    <br></br>
+//    <input type="text"   onChange={(event)=> setuserinput(event.target.value)} ></input>
+//    <button className="button " onClick={()=> Add()}>Add</button>
+//    <ul>{
+//   todos.map((todo,index)=> <li key={index}>{todo}</li>)
+//    } </ul>
+//   </div> 
+     
+// )
+//    }
+//  export default App; 
+
+
+
+//motivational quptes project in react
+
+import React,{useState} from 'react';
+import ItemQuote from 'ItemQuote';
 
 
 const App=()=>{
-  const[P,setP]=useState(0)
-  const[T,setT]=useState(0)
-  const[R,setR]=useState(0)
-  const[Si,setSi]=useState(0)
+  const [items,setItems]=useState([{"text":"We can do it","from":"Sebika Nepal"},
+                                  {"text":"keep learning","from":"Rojina Nepal"}
+                                  ])
 
-  const Calculate=()=>{
-    
-   setSi((P*T*R)/100);
 
-  }
+  return <div>
+    <ItemQuote/>
+  </div>
+}
 
-return (
-<div className="div">
-<Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-         
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            SimpleInterest
-          </Typography>
-          
-        </Toolbar>
-      </AppBar>
-      <br></br>
-      <TextField onChange={(event)=>setP(event.target.value)} id="outlined-basic" label="Enter P" variant="outlined" />
-      <TextField onChange={(event)=>setT(event.target.value)} id="outlined-basic" label="Enter t" variant="outlined" />
-      <TextField onChange={(event)=>setR(event.target.value)} id="outlined-basic" label="Enter R" variant="outlined" />
-    
-    <br>
-    </br>
-    <Button onClick={()=>{
-      Calculate()
-    }} variant="contained">Calculate</Button>
-    <br>
-    </br>
-    <Typography variant="h6" gutterBottom>
-       SimpleInterest is {Si}
-      </Typography>
-    </Box>
-</div>
-)}
-export default App;
