@@ -161,13 +161,19 @@ import ItemQuote from 'ItemQuote';
 
 
 const App=()=>{
-  const [items,setItems]=useState([{"text":"We can do it","from":"Sebika Nepal"},
-                                  {"text":"keep learning","from":"Rojina Nepal"}
+  const [items,setItems]=useState([
+                                  {"text":"We can do it","from":"Sebika Nepal"},
+                                  {"text":"keep learning","from":"Rojina Nepal"},
                                   ])
 
 
-  return <div>
-    <ItemQuote/>
+  return (
+  <div>
+ {items.map((item)=>  <ItemQuote author={item.from} text={item.text}/>)}
+  
+  
   </div>
-}
 
+)
+}
+export default App

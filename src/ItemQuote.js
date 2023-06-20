@@ -12,10 +12,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
-const ItemQuote=()=>{
+const ItemQuote=({text,author})=>{
 
     return (
-        <Item>Item 1</Item>
+     <div> <Item>{text}</Item> <p>{author}</p> </div>  
     )
   
 }
