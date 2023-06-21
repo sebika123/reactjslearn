@@ -15,8 +15,8 @@ const Item = styled(Paper)(({ theme }) => ({
 const ItemQuote=({text,author})=>{
 
     return (
-     <div> <Item>{text}</Item> <p>{author}</p> </div>  
+     <div> <Item>{text}</Item> <p>Author:{author}</p> </div>  
     )
   
 }
-export default ItemQuote;
+export default ItemQuote
