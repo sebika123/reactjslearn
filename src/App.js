@@ -164,7 +164,7 @@ const App=()=>{
   const [items,setItems]=useState([
                                   {"text":"We can do it","from":"Sebika Nepal"},
                                   {"text":"keep learning","from":"Rojina Nepal"},
-                                 // {"learning":"Reactjs"}
+                               
                                   ])
 
 
